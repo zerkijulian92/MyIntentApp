@@ -10,6 +10,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     Button btnMoveActivity;
     Button btnMoveWithDataActivity;
+    Button btnMoveWithDataObject;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,13 +19,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         btnMoveActivity = findViewById(R.id.btn_move_activity);
         btnMoveWithDataActivity = findViewById(R.id.btn_move_activity_data);
+        btnMoveWithDataObject = findViewById(R.id.btn_move_activity_object);
 
-        btnMoveWithDataActivity.setOnClickListener(this);
         btnMoveActivity.setOnClickListener(this);
+        btnMoveWithDataActivity.setOnClickListener(this);
+        btnMoveWithDataObject.setOnClickListener(this);
     }
 
 
-   //Melakukan perpindahan Activity mengunakan Intent
+    //Melakukan perpindahan Activity mengunakan Intent
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
