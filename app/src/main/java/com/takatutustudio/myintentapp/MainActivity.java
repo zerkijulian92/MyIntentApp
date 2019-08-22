@@ -36,6 +36,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnMoveWithDataActivity.setOnClickListener(this);
         btnMoveWithDataObject.setOnClickListener(this);
         btnDialPhone.setOnClickListener(this);
+        btnMoveForResult.setOnClickListener(this);
     }
 
 
