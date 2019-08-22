@@ -1,6 +1,7 @@
 package com.takatutustudio.myintentapp;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -11,6 +12,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Button btnMoveActivity;
     Button btnMoveWithDataActivity;
     Button btnMoveWithDataObject;
+    Button btnDialPhone;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,10 +22,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnMoveActivity = findViewById(R.id.btn_move_activity);
         btnMoveWithDataActivity = findViewById(R.id.btn_move_activity_data);
         btnMoveWithDataObject = findViewById(R.id.btn_move_activity_object);
+        btnDialPhone = findViewById(R.id.btn_dial_number);
 
         btnMoveActivity.setOnClickListener(this);
         btnMoveWithDataActivity.setOnClickListener(this);
         btnMoveWithDataObject.setOnClickListener(this);
+        btnDialPhone.setOnClickListener(this);
     }
 
 
@@ -40,6 +44,22 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 moveWithDataIntent.putExtra(MoveWithDataActivity.EXTRA_NAME, "Zerky Yulyandri");
                 moveWithDataIntent.putExtra(MoveWithDataActivity.EXTRA_AGE, 5);
                 startActivity(moveWithDataIntent);
+                break;
+            case R.id.btn_move_activity_object:
+                Person person = new Person();
+                person.setName("DicodingAcademy");
+                person.setAge(5);
+                person.setEmail("academy@dicoding.com");
+                person.setCity("Bandung");
+
+                Intent moveWithObjectIntent = new Intent(MainActivity.this, MoveWithObjectActivity.class);
+                moveWithObjectIntent.putExtra(MoveWithObjectActivity.EXTRA_PERSON, person);
+                startActivity(moveWithObjectIntent);
+                break;
+            case R.id.btn_dial_number:
+                String phoneNumber = "0812110841382";
+                Intent dialPhoneIntent = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:" +phoneNumber));
+                startActivity(dialPhoneIntent);
                 break;
         }
     }
