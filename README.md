@@ -25,6 +25,13 @@ Referensi
 ----------------
 dicoding: https://www.dicoding.com/academies/14/tutorials/127?from=135
 
+Latihan
+----------
+- Intent - Latihan : Intent Explicit
+- Intent - Latihan : Intent Explicit dengan Parcelable
+- Intent - Latihan : Intent Implicit
+- Intent - Latihan : Intent dengnan ResultActivity
+
 Screenshoot
 -------------
 ![GIF intent](https://user-images.githubusercontent.com/50509675/63530935-a3948600-c531-11e9-960c-ae2475bfe820.gif)
